@@ -81,4 +81,3 @@ class RegisterCurb:
             return common_helpers.response('failed',
                                            app.config["FAILURE_MESSAGE_500"],
                                            more_info, [], 500)
-
