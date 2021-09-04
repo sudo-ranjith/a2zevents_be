@@ -56,7 +56,7 @@ import app.transport_agent.view as transport_agent_view
 api.add_namespace(register_view.register)
 api.add_namespace(login_view.login_ns)
 api.add_namespace(purchase_module_view.purchase_cal)
-api.add_namespace(transport_agent_view.fireman)
+api.add_namespace(transport_agent_view.transport_agent)
 
 api.namespaces.clear()
 app.register_blueprint(blueprint)
@@ -64,7 +64,7 @@ app.register_blueprint(blueprint)
 api.add_namespace(register_view.register)
 api.add_namespace(login_view.login_ns)
 api.add_namespace(purchase_module_view.purchase_cal)
-api.add_namespace(transport_agent_view.fireman)
+api.add_namespace(transport_agent_view.transport_agent)
 
 
 @app.route('/about')
