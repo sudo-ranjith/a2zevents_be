@@ -50,13 +50,14 @@ import app.login.view as login_view
 import app.Register.view as register_view
 import app.purchase_module.view as purchase_module_view
 import app.transport_agent.view as transport_agent_view
-
+import app.event_module.view as event_module_view
 
 # register namespace for swagger UI
 api.add_namespace(register_view.register)
 api.add_namespace(login_view.login_ns)
 api.add_namespace(purchase_module_view.purchase_cal)
 api.add_namespace(transport_agent_view.transport_agent)
+api.add_namespace(event_module_view.event_module)
 
 api.namespaces.clear()
 app.register_blueprint(blueprint)
@@ -65,6 +66,7 @@ api.add_namespace(register_view.register)
 api.add_namespace(login_view.login_ns)
 api.add_namespace(purchase_module_view.purchase_cal)
 api.add_namespace(transport_agent_view.transport_agent)
+api.add_namespace(event_module_view.event_module)
 
 
 @app.route('/about')
