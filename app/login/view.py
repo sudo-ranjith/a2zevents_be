@@ -40,9 +40,9 @@ class Login(Resource):
             post_data = request.get_json()
             password = post_data.get("password")
             role = post_data.get("role")
-            id_number = post_data.get("id_number")
+            email = post_data.get("email")
 
-            check_existing_query = {"id_number":  id_number, "role": role}
+            check_existing_query = {"email":  email, "role": role}
 
             registeration_obj = login_model.RegisterCurb()
             user_data = registeration_obj.read_data(check_existing_query)
@@ -74,7 +74,7 @@ class Login(Resource):
                                            more_info,
                                            [post_data['role']],
                                            200,
-                                           post_data['id_number'])
+                                           post_data['email'])
         except Exception as e:
             e = f"{traceback.format_exc()}"
             more_info = "Unable to Inserted data :Exception occurred - " + str(e)
