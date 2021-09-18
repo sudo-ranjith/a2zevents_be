@@ -63,7 +63,7 @@ class Login(Resource):
 
             post_data['created_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S:%f')
             post_data['active'] = 1
-            # post_data['token'] = create_jwt(email)
+            post_data['token'] = create_jwt(email)
             del post_data['password']
             # user_item = login_model.RegisterCurb()
             # user_item = user_item.find_modify({'email': email}, post_data)
