@@ -15,9 +15,9 @@ event_module = api.model("event_module", {
     "alternate_contact_number" : fields.String(required=False, description="alternate_contact_number"),
     "alternate_whatsapp" : fields.String(required=True, description="alternate_whatsapp"),
     "email" : fields.String(required=False, description="email"),
-    "about" : fields.String(required=False, description="about"),
-    'organizer_details': fields.List(fields.Raw(), description="organizer_details"),
-    'vehicle_details': fields.List(fields.Raw(), description="vehicle_details")
+    "about" : fields.String(required=False, description="about")
+    # 'organizer_details': fields.List(fields.Raw(), description="organizer_details"),
+    # 'vehicle_details': fields.List(fields.Raw(), description="vehicle_details")
     })
 
 
